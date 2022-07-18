@@ -1,0 +1,121 @@
+.navbar {
+  height: clamp(60px, 10vw, 100px);
+  background: #443;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 var(--main-padding);
+}
+
+.logo_container {
+  padding: 10px;
+  width: clamp(1px, 200vw, 304px);
+  margin-left: -20px;
+}
+
+.menus {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(15px, 3vw, 45px);
+}
+
+.menu_link {
+  font-size: clamp(16px, 1vw, 20px);
+  font-weight: 500;
+  color: #fff
+}
+
+.menu_link.active,
+.menu_link:hover {
+  color: var(--secondary-color);
+}
+
+.mobile_menu_toggle {
+  display: flex;
+}
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #000;
+  stroke-width: 4.5;
+  stroke-linecap: round;
+}
+
+.ham3 .top {
+  stroke-dasharray: 40 130;
+}
+.ham3 .middle {
+  stroke-dasharray: 40 140;
+}
+.ham3 .bottom {
+  stroke-dasharray: 40 205;
+}
+.ham3.active .top {
+  stroke-dasharray: 75 130;
+  stroke-dashoffset: -63px;
+}
+.ham3.active .middle {
+  stroke-dashoffset: -102px;
+}
+.ham3.active .bottom {
+  stroke-dasharray: 110 205;
+  stroke-dashoffset: -86px;
+}
+
+.side_navbar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  overflow: scroll;
+  width: 270px;
+  background-color: #fff;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5);
+  transition: 300ms;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.side_navbar.open {
+  transform: scaleX(1);
+}
+.mobile_menus {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.mobile_menus .menu {
+  width: 200px;
+  margin-block: 10px;
+  padding: 10px;
+}
+@media screen and (min-width: 780px) {
+  .menus {
+    display: flex;
+  }
+  .navbar.blur {
+    filter: blur(0px);
+    pointer-events: auto;
+  }
+  .mobile_menu_toggle {
+    display: none;
+  }
+  .side_navbar {
+    display: none;
+  }
+}

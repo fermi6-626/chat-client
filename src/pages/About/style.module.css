@@ -1,0 +1,6 @@
+.text_content p {
+  font-size: clamp(16px, 1.5vw, 24px);
+  line-height: clamp(24px, 1.5vw, 36px);
+  color: var(--text-color);
+  max-width: 38ch;
+}

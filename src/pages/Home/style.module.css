@@ -1,0 +1,45 @@
+.text_content {
+  /* flex: 1; */
+}
+
+.text_content h5 {
+  font-size: clamp(20px, 2.2vw, 28px);
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  color: var(--text-color);
+  margin-top: clamp(20px, 4vw, 60px);
+}
+
+.text_content p {
+  font-size: clamp(14px, 0.8vw, 18px);
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  color: var(--text-color);
+  margin-top: clamp(20px, 1vw, 20px);
+  cursor: pointer;
+}
+
+.warning {
+  margin-top: 70px !important;
+}
+
+.banner_container {
+  display: none;
+}
+
+@media screen and (min-width: 780px) {
+  .banner_container {
+    display: none;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .content {
+    flex-direction: row;
+  }
+
+  .banner_container {
+    display: flex;
+  }
+}

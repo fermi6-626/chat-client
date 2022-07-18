@@ -1,0 +1,11 @@
+.row {
+  display: flex;
+  margin-top: clamp(15px, 2vw, 30px);
+  gap: clamp(15px, 1vw, 30px);
+  align-items: center;
+}
+
+.icon_container {
+  width: clamp(80px, 4vw, 100px);
+  cursor: pointer;
+}

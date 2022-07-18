@@ -1,0 +1,12 @@
+.text_content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.text_content li {
+  display: flex;
+  align-items: center;
+  font-size: clamp(16px, 1.2vw, 24px);
+  margin-left: 10px;
+}
