@@ -13,11 +13,10 @@ const formReducer = (state, event) => {
 }
 const Home = () => {
   const navigate = useNavigate();
-  const [select, setSelect] = useState([""])
+  const [select, setSelect] = useState(["hell"])
   const handleclick = () => {
     navigate('/chat')
   };
-  const [formData, setFormData] = useReducer(formReducer, {});
   const [submit, setSubmit] = useState(false);
   const handleSubmit = event => {
     event.preventDefault();
@@ -59,24 +58,21 @@ const Home = () => {
                 Text message
               </button>
             </div>
-            <div className={'button_container'}>
-              {submit &&
+            <div className={'tags-input-container'}>
+              {/* {submit &&
                 <ul>
                   {Object.entries(formData).map(([name, value]) => (
                     <li key={name}>{name}:{value.toString()}</li>
                   ))}
                 </ul>
-              }
-
-              <form onSubmit={handleSubmit} className={'interest'} placeHolder='Add Interests'>
-                <TagsInput
-                  className={`tags`}
-                  name="interests"
-                  value={select}
-                  placeHolder='Add Interests'
-                  onChange={setSelect}
-                />
-              </form>
+              } */}
+              {select.map((tag, index) => (
+                <div className={'tag-item'} key={index}>
+                  <span className={'text'}>{select}</span>
+                  <span className={'close'}>&times;</span>
+                </div>
+              ))}
+              <input type='text' className={'tags-input'} placeholder="Add Interests" />
               <button type='submit' className={'submit_btn'}>Add</button>
             </div>
             <p className={style.warning}>
@@ -90,6 +86,7 @@ const Home = () => {
               src={bannerImage}
               style={{
                 width: '600px',
+
               }}
               alt='video call'
             />
