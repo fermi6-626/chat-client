@@ -94,7 +94,7 @@ const Navbar = () => {
         <Zoom right cascade spy={isMenuOpen}>
           <div className={`${style.navbar} ${isMenuOpen && style.blur}`}>
             <div className={style.logo_container}>
-              <img src={logo} alt='omegle logo' />
+              <img src={logo} alt='startalk' />
             </div>
           </div>
         </Zoom>

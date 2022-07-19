@@ -1,15 +1,14 @@
 .navbar {
   height: clamp(60px, 10vw, 100px);
-  background: #443;
+  background: black;
   display: flex;
   justify-content: space-between;
   padding: 0 var(--main-padding);
 }
 
 .logo_container {
-  padding: 10px;
-  width: clamp(1px, 200vw, 304px);
-  margin-left: -20px;
+  padding: 1px;
+  margin-left: -7px;
 }
 
 .menus {
