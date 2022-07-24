@@ -297,7 +297,6 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: calc(100vh - clamp(60px, 10vw, 100px));
   padding: 0 var(--main-padding);
   gap: 15px;
 }
