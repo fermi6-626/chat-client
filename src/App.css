@@ -22,8 +22,7 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
   background-image: url(./assets/image/bg.png);
-  background-position-x: center;
-  background-position-y: center;
+  background-size: cover;
 }
 
 img {
@@ -318,7 +317,7 @@ li {
   font-weight: 500;
   font-family: 'Nunito', sans-serif;
   color: var(--text-color);
-  margin-bottom: clamp(20px, 1vw, 20px);
+  margin-bottom: clamp(2px, 1vw, 2px);
 }
 
 .button_container {

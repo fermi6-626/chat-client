@@ -8,7 +8,7 @@ import Rules from './pages/Rules';
 import Chat from './pages/Chat';
 import Message from './pages/Message';
 
-export default function App() {
+function App() {
   return (
     <BrowserRouter>
       <Routes>
@@ -23,3 +23,4 @@ export default function App() {
   )
 }
 
+export default App

@@ -1,8 +1,8 @@
-import React, { useCallback, useEffect, useState } from 'react'
-import style from './style.module.css'
-import moment from 'moment'
-import io from 'socket.io-client'
-import { useRef } from 'react'
+import React, { useCallback, useEffect, useState } from 'react';
+import style from './style.module.css';
+import moment from 'moment';
+import io from 'socket.io-client';
+import { useRef } from 'react';
 
 const Chat = () => {
   const [value, setValue] = useState('')

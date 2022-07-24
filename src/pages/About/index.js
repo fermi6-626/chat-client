@@ -12,11 +12,11 @@ const About = () => {
         <div>
           <div className={`text_content ${style.text_content}`}>
             <p>
-              Omegle (oh·meg·ull) is a great way to meet new friends, even while
-              practicing social distancing. When you use Omegle, you are paired
-              randomly with another person to talk one-on-one. If you prefer,
-              you can add your interests and you'll be randomly paired with
-              someone who selected some of the same interests.
+              Chat: The final frontier.
+              These are the webapp of the chat-app startalk.
+              It’s continuing mission to talk to strange new people.
+              To seek out new life and new civilization.
+              To boldly go where many man has gone before.
             </p>
           </div>
         </div>

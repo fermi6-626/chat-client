@@ -1,13 +1,13 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react'
-import Navbar from '../../components/Navbar'
-import style from './style.module.css'
-import { RiSendPlaneFill } from 'react-icons/ri'
-import { BsArrowRightCircleFill } from 'react-icons/bs'
-import { BsMicFill } from 'react-icons/bs'
-import moment from 'moment'
-import io from 'socket.io-client'
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import Navbar from '../../components/Navbar';
+import style from './style.module.css';
+import { RiSendPlaneFill } from 'react-icons/ri';
+import { BsArrowRightCircleFill } from 'react-icons/bs';
+import { BsMicFill } from 'react-icons/bs';
+import moment from 'moment';
+import io from 'socket.io-client';
 
-const Message: React.FC = () => {
+const Message = () => {
   const [value, setValue] = useState('')
   const [socket, setSocket] = useState<any>(null)
   const [roomId, setRoomId] = useState('')
