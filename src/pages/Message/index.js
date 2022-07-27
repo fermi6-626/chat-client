@@ -9,7 +9,7 @@ import io from 'socket.io-client';
 
 const Message = () => {
   const [value, setValue] = useState('')
-  const [socket, setSocket] = useState<any>(null)
+  const [socket, setSocket] = useState(null)
   const [roomId, setRoomId] = useState('')
   const [messages, setMessages] = useState([])
   const [lastTyping, setLastTyping] = useState('')
@@ -43,7 +43,7 @@ const Message = () => {
   // after connecting to other user
   useEffect(() => {
     if (socket != null) {
-      socket.on('roomId', (data: any) => {
+      socket.on('roomId',(data) => {
         setRoomId(data)
         if (!data) {
           setIsStrangerLeft(true)
@@ -58,8 +58,8 @@ const Message = () => {
   useEffect(() => {
     if (socket != null) {
       // reciving message
-      socket.on('message', (data: any) => {
-        setMessages((prevState: any) => [...prevState, data])
+      socket.on('message',(data) => {
+        setMessages((prevState) => [...prevState, data])
         scrollToBottom()
         // audio.play()
       })
@@ -70,7 +70,7 @@ const Message = () => {
   useEffect(() => {
     if (socket != null) {
       // reciving message
-      socket.on('typing', (data: any) => {
+      socket.on('typing', (data) => {
         setIsStrangerTyping(data?.isTyping)
       })
     }
@@ -107,12 +107,12 @@ const Message = () => {
   }
 
   //  detecting user typing
-  const handelInputChange = (e: any) => {
+  const handelInputChange = (e) => {
     if (e.key === 'Enter' && e.shiftKey === false) {
       handleSendMessage()
     } else {
       if (socket !== null) {
-        const time: any = moment(new Date())
+        const time = moment(new Date())
         setLastTyping(time)
         socket.emit('typing', {
           roomId,
@@ -228,7 +228,7 @@ const Message = () => {
 
 export default Message
 
-const Strangers = (props: any) => {
+const Strangers = (props) => {
   return (
     <div className={`${style.box} ${style.strangers_box}`}>
       <div className={style.first_row}>
@@ -241,7 +241,7 @@ const Strangers = (props: any) => {
     </div>
   )
 }
-const Self = (props: any) => {
+const Self = (props) => {
   return (
     <div className={`${style.box} ${style.self_box}`}>
       <div className={style.first_row}>
